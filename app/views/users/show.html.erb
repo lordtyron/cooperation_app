@@ -25,6 +25,35 @@
   <%= @user.account_no %>
 </p>
 
+<p>
+  <b>Loans :<br />
+<table>
+  <tr>
+    <th>Kind</th>
+    <th>User</th>
+    <th>Amount</th>
+    <th>Installment</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+  </b>
+
+
+<% @user.loans.each do |loan| %>
+  <tr>
+    <td><%= loan.kind %></td>
+    <td><%= loan.user_id %></td>
+    <td><%= loan.amount %></td>
+    <td><%= loan.installment %></td>
+    <td><%= loan.status %></td>
+    <td><%= link_to 'Show', loan %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
