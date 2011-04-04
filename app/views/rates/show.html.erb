@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Kind:</b>
+  <%= @rate.kind %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @rate.position %>
+</p>
+
+<p>
+  <b>Percent:</b>
+  <%= @rate.percent %>
+</p>
+
+<p>
+  <b>Expired date:</b>
+  <%= @rate.expired_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_rate_path(@rate) %> |
+<%= link_to 'Back', rates_path %>

@@ -1,0 +1,29 @@
+<h1>Listing rates</h1>
+
+<table>
+  <tr>
+    <th>Kind</th>
+    <th>Position</th>
+    <th>Percent</th>
+    <th>Expired date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rates.each do |rate| %>
+  <tr>
+    <td><%= rate.kind %></td>
+    <td><%= rate.position %></td>
+    <td><%= rate.percent %></td>
+    <td><%= rate.expired_date %></td>
+    <td><%= link_to 'Show', rate %></td>
+    <td><%= link_to 'Edit', edit_rate_path(rate) %></td>
+    <td><%= link_to 'Destroy', rate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rate', new_rate_path %>
